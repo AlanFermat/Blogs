@@ -1,5 +1,3 @@
-% HW04, Problem 2 (learn f=1/x)
-
 % function to train 2-layer neural net
 % Inputs:
 % train_features - training samples
