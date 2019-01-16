@@ -51,8 +51,6 @@ def display_compare(num, i):
     plt.title('Prediction: %d Label: %d' % (prediction, label))
     plt.imshow(x_train.reshape([28,28]), cmap=plt.get_cmap('gray_r'))
     plt.savefig("pic " + str(i) + ".png")
-    plt.show()
-
 
 train_step = 1000
 with tf.Session() as sess:
@@ -61,7 +59,7 @@ with tf.Session() as sess:
 	for i in range(train_step+1):
 		sess.run(trainingAlg, feed_dict={x_: x_train, y_: y_train})
 		if i%100 == 0:
-			display_compare(ran.randint(0, 55000), i)
+			display_compare(11, i)
 			print('Training Step:' + str(i) + '  Accuracy =  ' 
 				+ str(sess.run(accuracy, feed_dict={x_: x_test, y_: y_test})) + '  Loss = ' + str(sess.run(loss, {x_: x_train, y_: y_train})))
 
